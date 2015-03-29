@@ -1,4 +1,4 @@
-FROM bcroq/nagare:hg
+FROM bcroq/nagare:latest
 
 RUN set -x \
         && apt-get update \
