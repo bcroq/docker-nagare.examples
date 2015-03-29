@@ -1,8 +1,6 @@
 FROM bcroq/nagare:latest
 
-RUN set -x \
-        && cd /var/tmp \
-        && apt-get update \
+RUN apt-get update \
         && apt-get install -y mercurial
 
 RUN set -x \
