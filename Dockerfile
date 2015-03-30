@@ -6,6 +6,7 @@ RUN apt-get update \
 RUN set -x \
         && hg clone http://hg.nagare.org/examples \
         && apt-get purge -y mercurial 'python.*' \
+        && rm -rf /var/lib/apt/lists/* \
         && cd examples \
         && python setup.py sdist \
         && mv dist/* /var/tmp/pypi \
